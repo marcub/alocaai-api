@@ -16,7 +16,11 @@ public class BinarySearchTree {
 
     public void insert(TreeNode nodeToInsert) {
 
-        recursiveInsert(this.root, nodeToInsert);
+        if (this.root == null) {
+            this.root = nodeToInsert;
+        } else {
+            recursiveInsert(this.root, nodeToInsert);
+        }
 
     }
 
@@ -34,6 +38,20 @@ public class BinarySearchTree {
 
     public TreeNode getMinNode() {
         return recursiveGetMinNode(this.root);
+    }
+
+    public TreeNode getMaxNode() {
+        return recursiveGetMaxNode(this.root);
+    }
+
+    private TreeNode recursiveGetMaxNode(TreeNode root) {
+        if (root == null) {
+            return null;
+        }
+        if (root.getRightNode() == null) {
+            return root;
+        }
+        return recursiveGetMaxNode(root.getRightNode());
     }
 
     private TreeNode recursiveGetMinNode(TreeNode root) {

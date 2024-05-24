@@ -5,6 +5,8 @@ import com.alocaai.alocaapi.model.*;
 import com.sun.source.tree.Tree;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.*;
 
 @Service
@@ -111,14 +113,18 @@ public class SolucaoGulosaServiceImplementation  implements  SolucaoGulosaServic
             solucaoGulosa.setPeso(t.getSala().getCapacidade() - t.getQtdAlunos() + 1);
             solucaoGulosa.setValor(t.getSala().getAr() + t.getSala().getVentilador() + 1);
 
-            Double razao = (double) (solucaoGulosa.getValor() / solucaoGulosa.getPeso());
+            Double razao = Double.valueOf(solucaoGulosa.getValor()) / Double.valueOf(solucaoGulosa.getPeso());
+            BigDecimal razaoBd = BigDecimal.valueOf(razao);
+            razaoBd = razaoBd.setScale(2, RoundingMode.HALF_UP);
+            razao = razaoBd.doubleValue();
 
             solucaoGulosa.setRazao(razao);
 
             TreeNode nodeTree = new TreeNode(razao, solucaoGulosa);
             solucaoGulosas.insert(nodeTree);
+            System.out.println(solucaoGulosas.getRoot());
         }
 
-        return solucaoGulosas.getMinNode().getSolucaoGulosa().getTurma().getSala();
+        return solucaoGulosas.getMaxNode().getSolucaoGulosa().getTurma().getSala();
     }
 }
