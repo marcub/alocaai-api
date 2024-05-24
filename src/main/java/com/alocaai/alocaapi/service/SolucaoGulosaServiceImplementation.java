@@ -93,7 +93,10 @@ public class SolucaoGulosaServiceImplementation  implements  SolucaoGulosaServic
         for (Turma t : turmas) {
             if (t.getSala() != null) {
                 if (t.getSala().getNome().equals(sala.getNome())) {
-                    if (t.getHorario().getDiaSemana().equals(horario.getDiaSemana()) && t.getHorario().getTurno().equals(horario.getTurno()) && t.getHorario().getHorario().equals(horario.getHorario())) {
+                    if (t.getHorario().getDiaSemana().equals(horario.getDiaSemana()) &&
+                            ((horario.getInicio().isAfter(t.getHorario().getInicio()) && horario.getInicio().isBefore(t.getHorario().getFim())) ||
+                                    (horario.getFim().isAfter(t.getHorario().getInicio()) && horario.getFim().isBefore(t.getHorario().getFim())) ||
+                                    (horario.getInicio().equals(t.getHorario().getInicio()) && horario.getFim().equals(t.getHorario().getFim())))) {
                         return true;
                     }
                 }
