@@ -1,10 +1,8 @@
 package com.alocaai.alocaapi.service;
 
 import com.alocaai.alocaapi.dto.CreateSolucaoDTO;
-import com.alocaai.alocaapi.model.Horario;
-import com.alocaai.alocaapi.model.Sala;
-import com.alocaai.alocaapi.model.SolucaoGulosa;
-import com.alocaai.alocaapi.model.Turma;
+import com.alocaai.alocaapi.model.*;
+import com.sun.source.tree.Tree;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -105,7 +103,7 @@ public class SolucaoGulosaServiceImplementation  implements  SolucaoGulosaServic
 
     public Sala definePesoValor(List<Turma> turmasSolucaoGulosa) {
 
-        List<SolucaoGulosa> solucaoGulosas = new ArrayList<SolucaoGulosa>();
+        BinarySearchTree solucaoGulosas = new BinarySearchTree(null);
 
         for (Turma t : turmasSolucaoGulosa) {
             SolucaoGulosa solucaoGulosa = new SolucaoGulosa();
@@ -117,16 +115,10 @@ public class SolucaoGulosaServiceImplementation  implements  SolucaoGulosaServic
 
             solucaoGulosa.setRazao(razao);
 
-            solucaoGulosas.add(solucaoGulosa);
+            TreeNode nodeTree = new TreeNode(razao, solucaoGulosa);
+            solucaoGulosas.insert(nodeTree);
         }
 
-        Collections.sort(solucaoGulosas, Collections.reverseOrder(new Comparator<SolucaoGulosa>() {
-            @Override
-            public int compare(SolucaoGulosa o1, SolucaoGulosa o2) {
-                return o1.getRazao().compareTo(o2.getRazao());
-            }
-        }));
-
-        return solucaoGulosas.get(0).getTurma().getSala();
+        return solucaoGulosas.getMinNode().getSolucaoGulosa().getTurma().getSala();
     }
 }
