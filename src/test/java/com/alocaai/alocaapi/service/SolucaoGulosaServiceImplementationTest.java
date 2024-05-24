@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -30,7 +31,7 @@ public class SolucaoGulosaServiceImplementationTest {
         Sala sala2 = new Sala("sala2", "Sala Comum", 1, 0, 25, 0, 0, 1, "Bloco A");
         Sala sala3 = new Sala("sala3", "Sala Comum", 1, 0, 27, 0, 0, 1, "Bloco A");
 
-        Horario horario = new Horario("Segunda", "Manhã", "08:00-10:00");
+        Horario horario = new Horario(LocalTime.of(8,0), LocalTime.of(10,0), "Segunda", "Manhã");
         List<String> recursos = new ArrayList<>();
         recursos.add("ar");
         recursos.add("quadroVidro");
@@ -63,8 +64,9 @@ public class SolucaoGulosaServiceImplementationTest {
         Sala sala1 = new Sala("sala1", "Sala Comum", 1, 0, 30, 0, 0, 1, "Bloco A");
         Sala sala2 = new Sala("sala2", "Sala Comum", 1, 0, 25, 0, 0, 1, "Bloco A");
 
-        Horario horario1 = new Horario("Segunda", "Manhã", "08:00-10:00");
-        Horario horario2 = new Horario("Terça", "Manhã", "08:00-10:00");
+        Horario horario1 = new Horario(LocalTime.of(8,0), LocalTime.of(10,0), "Segunda", "Manhã");
+        Horario horario2 = new Horario(LocalTime.of(8,0), LocalTime.of(10,0), "Terça", "Manhã");
+
         List<String> recursos = new ArrayList<>();
         recursos.add("ar");
         recursos.add("quadroVidro");
@@ -100,8 +102,8 @@ public class SolucaoGulosaServiceImplementationTest {
         salas.add(sala1);
         salas.add(sala2);
 
-        Horario horario1 = new Horario("Segunda", "Manhã", "08:00-10:00");
-        Horario horario2 = new Horario("Terça", "Manhã", "08:00-10:00");
+        Horario horario1 = new Horario(LocalTime.of(8,0), LocalTime.of(10,0), "Segunda", "Manhã");
+        Horario horario2 = new Horario(LocalTime.of(8,0), LocalTime.of(10,0), "Terça", "Manhã");
         List<String> recursos = new ArrayList<>();
         recursos.add("ar");
         recursos.add("quadroVidro");
