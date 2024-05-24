@@ -122,7 +122,6 @@ public class SolucaoGulosaServiceImplementation  implements  SolucaoGulosaServic
 
             TreeNode nodeTree = new TreeNode(razao, solucaoGulosa);
             solucaoGulosas.insert(nodeTree);
-            System.out.println(solucaoGulosas.getRoot());
         }
 
         return solucaoGulosas.getMaxNode().getSolucaoGulosa().getTurma().getSala();
