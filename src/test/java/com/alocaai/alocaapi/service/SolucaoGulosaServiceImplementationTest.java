@@ -27,9 +27,9 @@ public class SolucaoGulosaServiceImplementationTest {
 
     @Test
     public void testDefineValor() {
-        Sala sala1 = new Sala("sala1", "Sala Comum", 1, 0, 30, 0, 0, 1, "Bloco A");
-        Sala sala2 = new Sala("sala2", "Sala Comum", 1, 0, 25, 0, 0, 1, "Bloco A");
-        Sala sala3 = new Sala("sala3", "Sala Comum", 1, 0, 27, 0, 0, 1, "Bloco A");
+        Sala sala1 = new Sala("sala1", "Sala Comum", 1, 0, 30, 0, 0, "Bloco A");
+        Sala sala2 = new Sala("sala2", "Sala Comum", 1, 0, 25, 0, 0, "Bloco A");
+        Sala sala3 = new Sala("sala3", "Sala Comum", 1, 0, 27, 0, 0, "Bloco A");
 
         Horario horario = new Horario(LocalTime.of(8,0), LocalTime.of(10,0), "Segunda", "Manhã");
         List<String> recursos = new ArrayList<>();
@@ -61,8 +61,8 @@ public class SolucaoGulosaServiceImplementationTest {
     @Test
     public void testJaAlocado() {
 
-        Sala sala1 = new Sala("sala1", "Sala Comum", 1, 0, 30, 0, 0, 1, "Bloco A");
-        Sala sala2 = new Sala("sala2", "Sala Comum", 1, 0, 25, 0, 0, 1, "Bloco A");
+        Sala sala1 = new Sala("sala1", "Sala Comum", 1, 0, 30, 0, 0, "Bloco A");
+        Sala sala2 = new Sala("sala2", "Sala Comum", 1, 0, 25, 0, 0, "Bloco A");
 
         Horario horario1 = new Horario(LocalTime.of(8,0), LocalTime.of(10,0), "Segunda", "Manhã");
         Horario horario2 = new Horario(LocalTime.of(8,0), LocalTime.of(10,0), "Terça", "Manhã");
@@ -95,8 +95,8 @@ public class SolucaoGulosaServiceImplementationTest {
     @Test
     public void testCreateSolucao() {
 
-        Sala sala1 = new Sala("sala1", "Sala Comum", 1, 0, 30, 0, 0, 1, "Bloco A");
-        Sala sala2 = new Sala("sala2", "Laboratório", 1, 0, 25, 0, 0, 1, "Bloco A");
+        Sala sala1 = new Sala("sala1", "Sala Comum", 1, 0, 30, 0, 0, "Bloco A");
+        Sala sala2 = new Sala("sala2", "Laboratório", 1, 0, 25, 0, 0, "Bloco A");
 
         List<Sala> salas = new ArrayList<>();
         salas.add(sala1);

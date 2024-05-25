@@ -7,20 +7,18 @@ public class Sala {
     private Integer ar;
     private Integer ventilador;
     private Integer capacidade;
-    private Integer quadroGiz;
-    private Integer quadroBranco;
     private Integer quadroVidro;
+    private Integer projetor;
     private String bloco;
 
-    public Sala(String nome, String ambiente, Integer ar, Integer ventilador, Integer capacidade, Integer quadroGiz, Integer quadroBranco, Integer quadroVidro, String bloco) {
+    public Sala(String nome, String ambiente, Integer ar, Integer ventilador, Integer capacidade, Integer quadroVidro, Integer projetor, String bloco) {
         this.nome = nome;
         this.ambiente = ambiente;
         this.ar = ar;
         this.ventilador = ventilador;
         this.capacidade = capacidade;
-        this.quadroGiz = quadroGiz;
-        this.quadroBranco = quadroBranco;
         this.quadroVidro = quadroVidro;
+        this.projetor = projetor;
         this.bloco = bloco;
     }
 
@@ -64,22 +62,6 @@ public class Sala {
         this.capacidade = capacidade;
     }
 
-    public Integer getQuadroGiz() {
-        return quadroGiz;
-    }
-
-    public void setQuadroGiz(Integer quadroGiz) {
-        this.quadroGiz = quadroGiz;
-    }
-
-    public Integer getQuadroBranco() {
-        return quadroBranco;
-    }
-
-    public void setQuadroBranco(Integer quadroBranco) {
-        this.quadroBranco = quadroBranco;
-    }
-
     public Integer getQuadroVidro() {
         return quadroVidro;
     }
@@ -96,18 +78,11 @@ public class Sala {
         this.bloco = bloco;
     }
 
-    @Override
-    public String toString() {
-        return "Sala{" +
-                "nome='" + nome + '\'' +
-                ", ambiente='" + ambiente + '\'' +
-                ", ar=" + ar +
-                ", ventilador=" + ventilador +
-                ", capacidade=" + capacidade +
-                ", quadroGiz=" + quadroGiz +
-                ", quadroBranco=" + quadroBranco +
-                ", quadroVidro=" + quadroVidro +
-                ", bloco='" + bloco + '\'' +
-                '}';
+    public Integer getProjetor() {
+        return projetor;
+    }
+
+    public void setProjetor(Integer projetor) {
+        this.projetor = projetor;
     }
 }

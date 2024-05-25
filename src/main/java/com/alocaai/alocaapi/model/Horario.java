@@ -47,14 +47,4 @@ public class Horario {
     public void setFim(LocalTime fim) {
         this.fim = fim;
     }
-
-    @Override
-    public String toString() {
-        return "Horario{" +
-                "inicio=" + inicio +
-                ", fim=" + fim +
-                ", diaSemana='" + diaSemana + '\'' +
-                ", turno='" + turno + '\'' +
-                '}';
-    }
 }
