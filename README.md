@@ -28,11 +28,12 @@ Requisições para a API devem seguir os padrões:
                         "periodo": 1,
                         "disciplina": {
                             "nome": "Teoria da Computação",
-                            "recursos": ["Projetor", "Quadro Branco"],
+                            "recursos": ["projetor", "quadroVidro"],
                             "ambienteSalaAdequado": "Sala Comum"
                         },
                         "horario": {
-                            "horario": "08:00 - 10:00",
+                            "inicio": "08:00",
+                            "fim": "10:00",    
                             "diaSemana": "Segunda",
                             "turno": "Manhã"
                         },
@@ -45,11 +46,12 @@ Requisições para a API devem seguir os padrões:
                         "periodo": 1,
                         "disciplina": {
                             "nome": "Laboratório de Software I",
-                            "recursos": ["Computador", "Quadro Branco", "Projetor"],
+                            "recursos": ["projetor", "ar", "quadroVidro"],
                             "ambienteSalaAdequado": "Laboratório"
                         },
                         "horario": {
-                            "horario": "10:00 - 12:00",
+                            "inicio": "10:00",
+                            "fim": "12:00",
                             "diaSemana": "Terça",
                             "turno": "Manhã"
                         },
@@ -65,19 +67,17 @@ Requisições para a API devem seguir os padrões:
                         "ar": 0,
                         "ventilador": 1,
                         "capacidade": 31,
-                        "quadroGiz": 1,
-                        "quadroBranco": 0,
+                        "projetor": 1,
                         "quadroVidro": 0,
                         "bloco": "Bloco 100"
                     },
                     {
                         "nome": "T-106",
-                        "ambiente": "Sala Comum",
+                        "ambiente": "Laboratório",
                         "ar": 0,
                         "ventilador": 1,
                         "capacidade": 31,
-                        "quadroGiz": 1,
-                        "quadroBranco": 0,
+                        "projetor": 1,
                         "quadroVidro": 0,
                         "bloco": "Bloco 100"
                     }
@@ -93,19 +93,44 @@ Requisições para a API devem seguir os padrões:
 
             [
                 {
-                    "qtdAlunos": 30,
-                    "periodo": 3,
+                    "qtdAlunos": 25,
+                    "periodo": 1,
                     "disciplina": {
-                        "nome": "Laboratório de Software III",
-                        "recursos": [
-                            "Computador",
-                            "Quadro Branco",
-                            "Projetor"
-                        ],
+                        "nome": "Teoria da Computação",
+                        "recursos": ["projetor", "quadroVidro"],
+                        "ambienteSalaAdequado": "Sala Comum"
+                    },
+                    "horario": {
+                        "inicio": "08:00",
+                        "fim": "10:00",    
+                        "diaSemana": "Segunda",
+                        "turno": "Manhã"
+                    },
+                    "curso": {
+                        "nome": "Engenharia de Software"
+                    },
+                    "sala": {
+                        "nome": "T-105",
+                        "ambiente": "Sala Comum",
+                        "ar": 0,
+                        "ventilador": 1,
+                        "capacidade": 31,
+                        "projetor": 1,
+                        "quadroVidro": 0,
+                        "bloco": "Bloco 100"
+                    }
+                },
+                {
+                    "qtdAlunos": 30,
+                    "periodo": 1,
+                    "disciplina": {
+                        "nome": "Laboratório de Software I",
+                        "recursos": ["projetor", "ar", "quadroVidro"],
                         "ambienteSalaAdequado": "Laboratório"
                     },
                     "horario": {
-                        "horario": "08:00 - 09:50",
+                        "inicio": "10:00",
+                        "fim": "12:00",
                         "diaSemana": "Terça",
                         "turno": "Manhã"
                     },
@@ -113,15 +138,14 @@ Requisições para a API devem seguir os padrões:
                         "nome": "Engenharia de Software"
                     },
                     "sala": {
-                        "nome": "L-401",
+                        "nome": "T-106",
                         "ambiente": "Laboratório",
-                        "ar": 1,
-                        "ventilador": 0,
-                        "capacidade": 30,
-                        "quadroGiz": 0,
-                        "quadroBranco": 0,
-                        "quadroVidro": 1,
-                        "bloco": "Bloco 400"
+                        "ar": 0,
+                        "ventilador": 1,
+                        "capacidade": 31,
+                        "projetor": 1,
+                        "quadroVidro": 0,
+                        "bloco": "Bloco 100"
                     }
                 }
             ]
