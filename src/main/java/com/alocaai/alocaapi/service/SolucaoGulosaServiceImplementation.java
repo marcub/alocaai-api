@@ -85,6 +85,8 @@ public class SolucaoGulosaServiceImplementation  implements  SolucaoGulosaServic
 
         //verificaSalaComPrioridade(turmasNaoAlocadas, turmasAlocadas);
 
+        BubbleSort.bubbleSort(turmasAlocadas);
+
         return turmasAlocadas;
     }
 
