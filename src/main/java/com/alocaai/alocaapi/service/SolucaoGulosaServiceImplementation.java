@@ -114,7 +114,23 @@ public class SolucaoGulosaServiceImplementation  implements  SolucaoGulosaServic
             SolucaoGulosa solucaoGulosa = new SolucaoGulosa();
             solucaoGulosa.setTurma(t);
             solucaoGulosa.setPeso(t.getSala().getCapacidade() - t.getQtdAlunos() + 1);
-            solucaoGulosa.setValor(t.getSala().getAr() + t.getSala().getVentilador() + 1);
+
+            Integer valor = 0;
+
+            if (t.getSala().getAr() == 1 && t.getDisciplina().getRecursos().contains("ar")) {
+                valor += 1;
+            }
+            if (t.getSala().getVentilador() == 1 && t.getDisciplina().getRecursos().contains("ventilador")) {
+                valor += 1;
+            }
+            if (t.getSala().getQuadroVidro() == 1 && t.getDisciplina().getRecursos().contains("quadroVidro")) {
+                valor += 1;
+            }
+            if (t.getSala().getProjetor() == 1 && t.getDisciplina().getRecursos().contains("projetor")) {
+                valor += 1;
+            }
+
+            solucaoGulosa.setValor(valor + 1);
 
             Double razao = Double.valueOf(solucaoGulosa.getValor()) / Double.valueOf(solucaoGulosa.getPeso());
             BigDecimal razaoBd = BigDecimal.valueOf(razao);
@@ -125,6 +141,7 @@ public class SolucaoGulosaServiceImplementation  implements  SolucaoGulosaServic
 
             TreeNode nodeTree = new TreeNode(razao, solucaoGulosa);
             solucaoGulosas.insert(nodeTree);
+            System.out.println(solucaoGulosas.getRoot());
         }
 
         return solucaoGulosas.getMaxNode().getSolucaoGulosa().getTurma().getSala();
