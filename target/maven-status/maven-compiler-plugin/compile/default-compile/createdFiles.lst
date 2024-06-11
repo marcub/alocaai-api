@@ -1,0 +1,14 @@
+com\alocaai\alocaapi\model\Turma.class
+com\alocaai\alocaapi\model\SolucaoGulosa.class
+com\alocaai\alocaapi\model\Horario.class
+com\alocaai\alocaapi\controller\SolucaoGulosaController.class
+com\alocaai\alocaapi\dto\CreateSolucaoDTO.class
+com\alocaai\alocaapi\service\SolucaoGulosaService.class
+com\alocaai\alocaapi\model\Sala.class
+com\alocaai\alocaapi\model\Curso.class
+com\alocaai\alocaapi\model\Disciplina.class
+com\alocaai\alocaapi\service\SolucaoGulosaServiceImplementation.class
+com\alocaai\alocaapi\model\TreeNode.class
+com\alocaai\alocaapi\model\BinarySearchTree.class
+com\alocaai\alocaapi\AlocaApiApplication.class
+com\alocaai\alocaapi\model\BubbleSort.class
