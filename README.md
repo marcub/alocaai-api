@@ -5,16 +5,16 @@ O Aloca API é uma API RESTful que permite o processamento de alocação de disc
 ## Diagramas de Classes
 
 ### Model
-![Model](https://https://github.com/marcub/alocaai-api/assets/model.png)
+![Model](https://https://github.com/marcub/alocaai-api/blob/main/assets/model.png)
 
 ### DTO (Data Transfer Object)
-![Dto](https://https://github.com/marcub/alocaai-api/assets/dto.png)
+![Dto](https://https://github.com/marcub/alocaai-api/blob/main/assets/dto.png)
 
 ### Controller
-![Controller](https://https://github.com/marcub/alocaai-api/assets/controller.png)
+![Controller](https://https://github.com/marcub/alocaai-api/blob/main/assets/controller.png)
 
 ### Service
-![Controller](https://https://github.com/marcub/alocaai-api/assets/controller.png)
+![Controller](https://https://github.com/marcub/alocaai-api/blob/main/assets/controller.png)
 
 ## Métodos
 Requisições para a API devem seguir os padrões:
