@@ -2,6 +2,20 @@
 
 O Aloca API é uma API RESTful que permite o processamento de alocação de disciplinas em salas utilizando heurísticas pré definidas.
 
+## Diagramas de Classes
+
+### Model
+![Model](https://https://github.com/marcub/alocaai-api/assets/model.png)
+
+### DTO (Data Transfer Object)
+![Dto](https://https://github.com/marcub/alocaai-api/assets/dto.png)
+
+### Controller
+![Controller](https://https://github.com/marcub/alocaai-api/assets/controller.png)
+
+### Service
+![Controller](https://https://github.com/marcub/alocaai-api/assets/controller.png)
+
 ## Métodos
 Requisições para a API devem seguir os padrões:
 | Método | Descrição |
